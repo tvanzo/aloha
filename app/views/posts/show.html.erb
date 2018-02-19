@@ -1,0 +1,28 @@
+<div class="col-lg-6">
+
+      <ul class="list-group media-list media-list-stream mb-4">
+          
+        <%= @post.content %>
+         
+        <li class="media list-group-item p-4">
+          <img
+            class="media-object d-flex align-self-start mr-3"
+            src="assets/img/avatar-fat.jpg">
+          <div class="media-body">
+            <div class="media-body-text">
+              <div class="media-heading">
+                <small class="float-right text-muted"><%= @post.created_at %></small>
+                <h6>Jacob Thornton</h6>
+              </div>
+              <p>
+               <%= @post.content %>
+              </p>
+              <small class="float-right text-muted"><%= link_to("Delete", "/posts/#{@post.id}/destroy", {method: "post"}) %></small>
+              
+            </div>
+          </div>
+        </li>
+       
+        
+      </ul>
+    </div>
