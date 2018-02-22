@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
     def index
-        "hi"
+        if user_signed_in?
+            redirect_to("/posts")
+        else
+            redirect_to("/users/sign_in")
+        end
     end
 end
