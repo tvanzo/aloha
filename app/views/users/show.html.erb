@@ -1,24 +1,23 @@
-<div class="main user-show">
-  <div class="container">
-    <div class="user">
-      <h2><%= @user.email %></h2>
-      
-    </div>
-    <!-- Add an each method inside <% %> -->
-    <% @user.posts.each do |post| %>
-      <!-- Paste the HTML here -->
-      <div class="posts-index-item">
-       
-        <div class="post-right">
-          <div class="post-user-name">
-            <%= link_to(post.user.email, "/users/#{post.user.id}") %>
+<h2><%=@user.email%></h2>
+<% @user.posts.each do |post| %>
+         
+        <li class="media list-group-item p-4">
+          <img
+            class="media-object d-flex align-self-start mr-3"
+            src="assets/img/avatar-fat.jpg">
+          <div class="media-body">
+            <div class="media-body-text">
+              <div class="media-heading">
+                <small class="float-right text-muted"><%=post.created_at%></small>
+              <%= link_to(post.user.email, "/users/#{post.user.id}") %>
+              </div>
+              <p>
+               <%= link_to(post.content, "/posts/#{post.id}")%>
+              </p>
+            </div>
           </div>
-          <%= link_to(post.content, "/posts/#{post.id}") %>
-        </div>
-      </div>
-      <%end%>
-      
-    <!-- Add an end statement -->
-    <% %>
-  </div>
-</div>
+        </li>
+        <% end %>
+        
+      </ul>
+    </div>
