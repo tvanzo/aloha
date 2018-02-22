@@ -6,4 +6,6 @@ class HomeController < ApplicationController
             redirect_to("/users/sign_in")
         end
     end
+    def t
+    end
 end
