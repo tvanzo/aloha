@@ -396,7 +396,7 @@
             <div class="media-body-text">
               <div class="media-heading">
                 <small class="float-right text-muted"><%=post.created_at%></small>
-                <h6>Jacob Thornton</h6>
+              <%= link_to(post.user.email, "/users/#{post.user.id}") %>
               </div>
               <p>
                <%= link_to(post.content, "/posts/#{post.id}")%>

@@ -12,11 +12,16 @@ end
   end
   
   def show
-    @post=Post.find_by(id:params[:id])
+   
+     @post = Post.find_by(id: params[:id])
+     @user = @post.user
   end
   
   def create
-    @post = Post.new(content: params[:content])
+    @post = Post.new(
+      content: params[:content],
+      user_id: current_user.id
+    )
     if @post.save
       flash[:notice] = "Post successfully created"
       redirect_to("/posts/index")

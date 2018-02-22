@@ -1,10 +1,24 @@
 <div class="main user-show">
   <div class="container">
     <div class="user">
-      <!-- Display the @user's name -->
-      <h2><%=current_user.email%></h2>
-      <!-- Display the @user's email -->
-      <p><%= %></p>
+      <h2><%= @user.email %></h2>
+      
     </div>
+    <!-- Add an each method inside <% %> -->
+    <% @user.posts.each do |post| %>
+      <!-- Paste the HTML here -->
+      <div class="posts-index-item">
+       
+        <div class="post-right">
+          <div class="post-user-name">
+            <%= link_to(post.user.email, "/users/#{post.user.id}") %>
+          </div>
+          <%= link_to(post.content, "/posts/#{post.id}") %>
+        </div>
+      </div>
+      <%end%>
+      
+    <!-- Add an end statement -->
+    <% %>
   </div>
 </div>
