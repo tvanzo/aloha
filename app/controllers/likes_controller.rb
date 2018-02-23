@@ -7,7 +7,7 @@ class LikesController < ApplicationController
     @like.save
     
     # Redirect to the "Post details" page
-    redirect_to("/posts/#{params[:post_id]}")
+    redirect_to request.referrer
   
   end
   

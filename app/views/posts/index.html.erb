@@ -387,7 +387,7 @@
         </li>
         
         <% @posts.each do |post| %>
-         
+        <% @likes_count = Like.where(post_id: post.id).count%>
         <li class="media list-group-item p-4">
           <img
             class="media-object d-flex align-self-start mr-3"
@@ -401,6 +401,17 @@
               <p>
                <%= link_to(post.content, "/posts/#{post.id}")%>
               </p>
+              <% if Like.find_by(user_id: current_user.id, post_id: post.id) %>
+        <!-- Rewrite the following line to a link to the "destroy" action -->
+        <%= link_to("/likes/#{post.id}/destroy", {method: "post"}) do %>
+        <span class="fa fa-heart like-btn-unlike"></span>
+        <%end%>
+      <% else %>
+       <%= link_to("/likes/#{post.id}/create", {method: "post"}) do%>
+        <span class="fa fa-heart like-btn"></span>
+      <% end %>
+      <% end %>
+      <%= @likes_count %>
             </div>
           </div>
         </li>
