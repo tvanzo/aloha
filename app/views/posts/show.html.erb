@@ -20,6 +20,17 @@
               <p>
                <%= @post.content %>
               </p>
+              <% if Like.find_by(user_id: current_user.id, post_id: @post.id) %>
+        <!-- Rewrite the following line to a link to the "destroy" action -->
+        <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
+        <span class="fa fa-heart like-btn-unlike"></span>
+        <%end%>
+      <% else %>
+       <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do%>
+        <span class="fa fa-heart like-btn"></span>
+      <% end %>
+      <% end %>
+      <%= @likes_count %>
               <small class="float-right text-muted"><%= link_to("Delete", "/posts/#{@post.id}/destroy", {method: "post"}) %></small>
               
             </div>
