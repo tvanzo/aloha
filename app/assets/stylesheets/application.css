@@ -164,3 +164,17 @@ strong {
   font-size: 14px;
   
 }
+
+/* Hover */
+
+#areas .panel {
+    min-height: 20px;
+    margin: 9px;
+    background-color: red;
+    -webkit-transition:0.3s;
+    transition:0.3s;
+}
+
+.test:hover{
+  
+}

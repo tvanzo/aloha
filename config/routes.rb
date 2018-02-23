@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   get "users/:id" => "users#show"
   get "jj" =>"home#t"
-  
+  get "answer" => "answers#index"
+  get "answer/:id" => "answers#new"
   get 'posts/index'
+  post 'answer/:id/create' =>"answers#create"
+ 
   
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,0 +1,36 @@
+<li class="media list-group-item p-4">
+          <img
+            class="media-object d-flex align-self-start mr-3"
+            src="assets/img/avatar-fat.jpg">
+          <div class="media-body">
+            <div class="media-body-text">
+              <div class="media-heading">
+                <small class="float-right text-muted"><%=@post.created_at%></small>
+              <%= link_to(@post.user.email, "/users/#{@post.user.id}") %>
+              </div>
+              <p>
+               <%= link_to(@post.content, "/posts/#{@post.id}")%>
+              </p>
+              <p class="float-right"><%= link_to("Answer", "/answer/#{@post.user.id}/new") %></p>
+            </div>
+          </div>
+        </li>
+        
+        <%= form_tag("/answer/#{params[:id]}/create") do %>
+        <li class="media list-group-item p-4">
+          
+          <div class="input-group">
+            
+            
+       
+            <input type="text" size="200" class="form-control" placeholder="Message" name="content">
+            <div class="input-group-btn">
+              <button type="submit" value="post" class="btn btn-secondary align-self-stretch">
+                <span class="icon icon-camera"></span>
+              </button>
+              
+            </div>
+            
+          </div>
+        <%end%>
+        </li>
