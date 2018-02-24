@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     @posts=Post.all.order(created_at: :desc)
     @post=Post.new
     
+    
 end
   def new
      @post = Post.new
@@ -16,6 +17,8 @@ end
      @post = Post.find_by(id: params[:id])
      @user = @post.user
      @likes_count = Like.where(post_id: @post.id).count
+     @comment=Comment.new
+    
   end
   
   def create

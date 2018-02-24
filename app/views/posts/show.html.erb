@@ -36,7 +36,32 @@
             </div>
           </div>
         </li>
+      <%@post.comments.each do |comment|%>
+      <li>
+        <%=User.find_by(id:comment.user_id).email%>
+        <%=comment.content%>
+        
+      </li>
+      <%end%>
+      
+      <%= form_tag("/posts/#{params[:id]}/comment") do %>
+        <li class="media list-group-item p-4">
+          
+          <div class="input-group">
+            
+            
        
+            <input type="text" size="200" class="form-control" placeholder="Message" name="content">
+            <div class="input-group-btn">
+              <button type="submit" value="content" class="btn btn-secondary align-self-stretch">
+                <span class="icon icon-camera"></span>
+              </button>
+              
+            </div>
+            
+          </div>
+        <%end%>
+        </li>
         
       </ul>
     </div>
