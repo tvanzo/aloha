@@ -374,7 +374,7 @@
               <%= message %>
             </div>
           <% end %>
-            <input type="text" class="form-control" placeholder="Message" name="content">
+            <input type="text" class="form-control" placeholder="Ask Matt" name="content">
             <div class="input-group-btn">
               <button type="submit" value="post" class="btn btn-secondary align-self-stretch">
                 <span class="icon icon-camera"></span>
@@ -413,6 +413,31 @@
       <% end %>
       <%= @likes_count %>
             </div>
+            
+            
+            
+            
+            
+            <% if post.answer %>
+            <ul class="media-list mb-2">
+              <li class="media mb-3">
+                <img
+                  class="media-object d-flex align-self-start mr-3"
+                  src="assets/img/avatar-fat.jpg">
+                <div class="media-body">
+                  <strong><%=User.find_by(id: post.answer.user_id).email%> </strong> 
+                  <%=post.answer.content %>
+                </div>
+              </li>
+            </ul>
+            <%end%>
+            
+            
+            
+            
+            
+            
+            
           </div>
         </li>
         <% end %>

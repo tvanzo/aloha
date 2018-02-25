@@ -116,15 +116,7 @@ strong {
   color: #ff4d75;
 }
 
-.form input {
-  width: 100%;
-  border: 1px solid #d8dadf;
-  padding: 10px;
-  color: #57575f;
-  font-size: 16px;
-  letter-spacing: 2px;
-  border-radius: 2px;
-}
+
 
 .form textarea {
   width: 100%;
@@ -177,4 +169,51 @@ strong {
 
 .test:hover{
   
+}
+
+body{
+  
+  margin: 0;
+  padding: 0;
+  background-color: : black;
+  background-size: cover;
+  
+}
+#back{
+  background:url(quora.jpg);
+  background-size:contain;
+}
+.container{
+  width:60%;
+  height:500px;
+  background:white;
+  margin:0 auto;
+  
+  padding:0 0 0 0;
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+.container .left{
+  
+  float:left;
+  width:50%;
+  height:500px;
+  background:url(quora.jpeg)
+  background-size:cover;
+  box-sizing:border-box;
+}
+
+.container .right{
+  float:right;
+  width:50%;
+  height:400px;
+  box-sizing:border-box;
+}
+
+.formBox{
+  width:100%;
+  padding:80px 40px;
+  box-sizing:border-box;
+  height:400px;
+  background:#fff;
 }
