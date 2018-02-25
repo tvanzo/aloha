@@ -27,12 +27,14 @@
 
   <div class="container-login100-form-btn">
     <%= f.submit 'Sign in', :class => 'login100-form-btn' %>
+    <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, :class => 'login100-form-btn loginBtn--google' %>
   </div>
   <%= render "devise/shared/links" %>
   <div class="w-full text-center ">
 						
-				<%= link_to("Sign Up", "/users/sign_up", :class => 'txt3') %>
-				<%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
+				
+<%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, :class => 'loginBtn--google' %>			  
+<%= link_to("Sign Up", "/users/sign_up", :class => 'txt3') %>
 				</div>
 <% end %>
 </div>
