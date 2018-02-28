@@ -5128,6 +5128,13 @@ a.bg-dark:focus, a.bg-dark:hover {
 .float-none {
   float: none !important; }
 
+#left-post{
+  display:inline-block;
+  margin-right:380px;
+}
+#right-post{
+  display:inline-block;
+}
 @media (min-width: 576px) {
   .float-sm-left {
     float: left !important; }

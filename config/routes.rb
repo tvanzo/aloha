@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   root :to =>"home#index"
   get 'posts' =>"posts#index"
   get 'posts/new' =>"posts#new"
+  get 'posts/asked' =>"posts#asked"
   post 'posts/create' =>"posts#create"
   get 'posts/:id' =>"posts#show"
   post "posts/:id/destroy" => "posts#destroy"

@@ -1,5 +1,4 @@
 
-
 <body>
 
 
@@ -365,26 +364,9 @@
     <div class="col-lg-6">
 
       <ul class="list-group media-list media-list-stream mb-4">
-          <%= form_tag("/posts/create") do %>
-          <li class="media list-group-item p-4 panel">
-          
-          <div class="input-group">
-            <% @post.errors.full_messages.each do |message| %>
-            <div class="form-error">
-              <%= message %>
-            </div>
-          <% end %>
-            <input type="text" class="form-control" placeholder="Message" name="content">
-            <div class="input-group-btn">
-              <button type="submit" value="post" class="btn btn-secondary align-self-stretch">
-                <span >Ask Matt</span>
-              </button>
-              
-            </div>
-            
-          </div>
-          <%end%>
-        </li>
+              <ul><a href=/posts><span>Feed</span></a><a href=/posts/asked><span class="text-muted"> Asked</span></a></ul> 
+
+        <%= render partial: "shared/ask" %>
         
               
               
@@ -395,7 +377,7 @@
               
               
           <% @posts.each do |post| %>
-         
+         <%if post.answer.blank?%>
         <li class="media list-group-item p-4">
           <img
             class="media-object d-flex align-self-start mr-3"
@@ -448,6 +430,7 @@
         
         
       </ul>
+      <%end%>
     </div>
     
   </body>
