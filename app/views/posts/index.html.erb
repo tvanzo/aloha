@@ -408,11 +408,13 @@
       
             <ul class="media-list mb-2">
               <li class="media mb-3">
-                <img
-                  class="media-object d-flex align-self-start mr-3"
-                  src="assets/img/avatar-fat.jpg">
-                <div class="media-body">
-                  <strong><%=User.find_by(id: post.answer.user_id).first_name%> </strong> 
+                
+                 
+              <div class="posts_pic"></div>
+
+                <div class="media-body" id="answer_cont_marg">
+                  
+                  <strong>  &nbsp  &nbsp<%=User.find_by(id: post.answer.user_id).first_name%> </strong> 
                   <%=post.answer.content %>
                 </div>
               </li>
