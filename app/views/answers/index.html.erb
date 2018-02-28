@@ -404,7 +404,7 @@
             
               <div class="media-heading">
                 <small class="float-right text-muted"><%=post.created_at%></small>
-              <%= link_to(post.user.email, "/users/#{post.user.id}") %>
+              <%= link_to(post.user.first_name, "/users/#{post.user.id}") %>
               </div>
               <p>
                <%= link_to(post.content, "/posts/#{post.id}")%>
@@ -435,7 +435,7 @@
                   class="media-object d-flex align-self-start mr-3"
                   src="assets/img/avatar-fat.jpg">
                 <div class="media-body">
-                  <strong><%=User.find_by(id: post.answer.user_id).email%> </strong> 
+                  <strong><%=User.find_by(id: post.answer.user_id).first_name%> </strong> 
                   <%=post.answer.content %>
                 </div>
               </li>

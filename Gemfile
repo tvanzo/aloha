@@ -57,3 +57,4 @@ gem 'devise'
 gem "font-awesome-rails"
 gem 'font-awesome-sass'
 gem 'omniauth-google-oauth2'
+gem 'paperclip', '~> 4.1'

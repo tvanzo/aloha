@@ -18,6 +18,10 @@ class User < ApplicationRecord
          user = User.create(
             email: data['email'],
             password: Devise.friendly_token[0,20],
+            image: data['image'],
+            first_name: data['first_name'],
+            last_name: data['last_name']
+
          )
      end
     user
