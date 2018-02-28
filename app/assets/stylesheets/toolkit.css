@@ -3069,7 +3069,7 @@ tbody.collapse.show {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background: url("cover.jpg");
   border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
   .card-header:first-child {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
@@ -8446,17 +8446,28 @@ img.zoom-img {
 
 .card-profile .card-header {
   height: 150px;
+    background: url("cover.png");
+
+  
   background-size: cover; }
 
 .card-profile-img {
-  max-width: 100px;
+  
+  width:75px;
+  height:75px;
   margin-top: -70px;
   margin-bottom: 5px;
+  margin-left:auto;
+  margin-right:auto;
   border: 3px solid #fff;
   border-radius: 100%;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+     background: url("matt.png");
+     background-size: cover;
+     }
 
+     
 .card-menu {
   list-style: none;
   padding: 0; }
