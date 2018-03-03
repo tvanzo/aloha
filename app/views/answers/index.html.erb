@@ -284,38 +284,7 @@
 <div class="container pt-4 pb-5">
   <div class="row">
     <div class="col-lg-3">
-      <div class="card card-profile mb-4">
-        <div class="card-header" style="background-image: url(assets/img/iceland.jpg);"></div>
-        <div class="card-body text-center">
-          <a href="profile/index.html">
-            <img
-              class="card-profile-img"
-              src="assets/img/avatar-dhg.png">
-          </a>
-
-          <h6 class="card-title">
-            <a class="text-inherit" href="profile/index.html">Dave Gamache</a>
-          </h6>
-
-          <p class="mb-4">I wish i was a little bit taller, wish i was a baller, wish i had a girl… also.</p>
-
-          <ul class="card-menu">
-            <li class="card-menu-item">
-              <a href="#userModal" class="text-inherit" data-toggle="modal">
-                Friends
-                <h6 class="my-0">12M</h6>
-              </a>
-            </li>
-
-            <li class="card-menu-item">
-              <a href="#userModal" class="text-inherit" data-toggle="modal">
-                Enemies
-                <h6 class="my-0">1</h6>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <%= render "shared/leftbar" %>
 
       <div class="card d-md-block d-lg-block mb-4">
         <div class="card-body">
@@ -407,7 +376,7 @@
               <%= link_to(post.user.first_name, "/users/#{post.user.id}") %>
               </div>
               <p>
-               <%= link_to(post.content, "/posts/#{post.id}")%>
+               <h3><%= link_to(post.content, "/posts/#{post.id}")%></h3>
               </p>
               <p class="float-right"><%= link_to("Answer", "/answer/#{post.id}") %></p>
 

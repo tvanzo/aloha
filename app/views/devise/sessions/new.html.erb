@@ -1,7 +1,8 @@
 <body>
 <div id="back">
 <div class="container2">
-	<div class="left"></div>
+	<div class="left"><%= render "shared/leftbar" %>
+</div>
 	<div class="right">
 	<div class="formBox">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

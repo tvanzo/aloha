@@ -1,4 +1,5 @@
-<h2><%=@user.email%></h2>
+<h2><%=@user.first_name%></h2>
+<img class="rounded-circle dimension35" src="<%=@user.image%>">
 <% @user.posts.each do |post| %>
          
         <li class="media list-group-item p-4">

@@ -144,18 +144,22 @@ strong {
 }
 
 .flash {
-  padding: 10px 0;
+  padding: 6px 0;
   color: white;
   background: rgb(251, 170, 88);
   text-align: center;
   position: absolute;
-  top: 64px;
+  top: 55px;
   z-index: 10;
   width: 100%;
   border-radius: 0 0 2px 2px;
   font-size: 14px;
-  
 }
+#hide{
+
+background-color:blue;
+}
+
 
 /* Hover */
 
@@ -190,7 +194,7 @@ body{
   height:500px;
   background:white;
   margin:0 auto;
-  
+  border:4px solid black;
   padding:0 0 0 0;
   box-shadow: 0 15px 40px rgba(0,0,0,.5);
 }
@@ -199,8 +203,8 @@ body{
   
   float:left;
   width:50%;
-  height:500px;
-  background:url(matt.png);
+  height:100%;
+  background:url("left.png");
   background-size:cover;
   box-sizing:border-box;
 }
@@ -242,3 +246,9 @@ body{
   margin-left: 80%;
 ;
 }
+
+.dimension35{
+  height: 35px;
+  width: 35px;
+}
+

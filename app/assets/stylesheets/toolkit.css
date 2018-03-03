@@ -3385,10 +3385,11 @@ tbody.collapse.show {
   border-radius: 0; }
 
 .alert {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem; }
+    padding: 20px;
+    background-color: #FF7F50; /* Red */
+    color: white;
+   
+}
 
 .alert-heading {
   color: inherit; }
@@ -8046,6 +8047,11 @@ textarea {
 .navbar-btn-avatar img {
   height: 35px;
   width: 35px; }
+  
+.35dimension{
+  height: 35px;
+  width: 35px;
+}
 
 .navbar-header::after {
   display: block;

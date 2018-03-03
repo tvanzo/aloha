@@ -1,4 +1,4 @@
-
+/* global $ */
 (function ($) {
     "use strict";
 
@@ -57,3 +57,5 @@
     
 
 })(jQuery);
+
+document.getElementById("p").innerHTML = "Hello JavaScript!";
