@@ -1,65 +1,6 @@
-<div class="col-lg-6">
+<div class="col-lg-6 center">
 
-      <ul class="list-group media-list media-list-stream mb-4">
-        
-       
-         
-        <li class="media list-group-item p-4">
-          <img
-            class="media-object d-flex align-self-start mr-3"
-            src="assets/img/avatar-fat.jpg">
-          <div class="media-body">
-            <div class="media-body-text">
-              <div class="media-heading">
-                <small class="float-right text-muted"><%= @post.created_at %></small>
-                <h6></h6>
-              </div>
-              <p>
-                <%=link_to(@user.email, "/users/#{@user.id}")%>
-              </p>
-              <p>
-               <%= @post.content %>
-              </p>
-              <% if Like.find_by(user_id: current_user.id, post_id: @post.id) %>
-        <!-- Rewrite the following line to a link to the "destroy" action -->
-        <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
-        <span class="fa fa-heart like-btn-unlike"></span>
-        <%end%>
-      <% else %>
-       <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do%>
-        <span class="fa fa-heart like-btn"></span>
-      <% end %>
-      <% end %>
-      <%= @likes_count %>
-              <small class="float-right text-muted"><%= link_to("Delete", "/posts/#{@post.id}/destroy", {method: "post"}) %></small>
-              
-            </div>
-          </div>
-        </li>
-         <%= form_tag("/posts/#{params[:id]}/comment") do %>
-        <li class="media list-group-item p-4">
-          
-          <div class="input-group">
-            
-            
-       
-            <input type="text" size="200" class="form-control" placeholder="Message" name="content">
-            <div class="input-group-btn">
-              <button type="submit" value="content" class="btn btn-secondary align-self-stretch">
-                <span class="icon icon-camera"></span>
-              </button>
-              
-            </div>
-            
-          </div>
-        <%end%>
-        </li>
-        
-      
-      
-      
-        
-      </ul>
+     
       
       
       
@@ -123,6 +64,40 @@
       
       
             <ul class="media-list mb-2">
+               <%= form_tag("/posts/#{params[:id]}/comment") do %>
+        <li class="media  p-4">
+          
+          <div class="input-group">
+            
+            
+       
+            <input type="text" size="200" class="form-control" placeholder="Message" name="content">
+            <div class="input-group-btn">
+              <button type="submit" value="content" class="btn btn-secondary align-self-stretch">
+                <span class="icon icon-camera"></span>
+              </button>
+              
+            </div>
+            
+          </div>
+        <%end%>
+        </li>
+              
+              <li class="media mb-3">
+                
+                 
+              <div class="posts_pic"></div>
+                
+                <div class="media-body" id="answer_cont_marg">
+                 
+                  <strong>  &nbsp  &nbsp<%=User.find_by(id: @post.answer.user_id).first_name%> </strong> 
+                  <%=@post.answer.content %> <small class="text-muted">answered <%=distance_of_time_in_words(@post.answer.created_at,Time.now)%></small>
+                </div>
+              </li>
+              
+              
+              
+              
                                <%@post.comments.each do |comment| %>
 
               <li class="media mb-3">
