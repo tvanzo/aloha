@@ -102,7 +102,11 @@
       </li>
       <li class="nav-item ml-2">
         <button class="btn btn-default navbar-btn navbar-btn-avatar" data-toggle="popover">
+         <%if current_user.image!=nil%>
           <img class="rounded-circle" src="<%=current_user.image%>">
+          <%else%>
+          <%=link_to (image_tag("user.png")), "/users/#{current_user.id}"%>
+          <%end%>
         </button>
       </li>
     </ul>

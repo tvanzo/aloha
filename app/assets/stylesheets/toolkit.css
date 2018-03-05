@@ -8516,3 +8516,7 @@ img.zoom-img {
 
 html {
   font-size: 14px; }
+
+.center{
+  margin:0 auto;
+}

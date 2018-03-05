@@ -252,3 +252,8 @@ body{
   width: 35px;
 }
 
+#profile-page-pic{
+  height:80px;
+  width:80px;
+  margin:0 auto;
+}
