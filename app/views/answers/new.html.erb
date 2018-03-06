@@ -3,9 +3,9 @@
       <ul class="list-group media-list media-list-stream mb-4">
 
 <li class="media list-group-item p-4">
-          <img
-            class="media-object d-flex align-self-start mr-3"
-            src="assets/img/avatar-fat.jpg">
+          <%if @post.user.image!=nil%>
+                 <img class="rounded-circle dimension35" src="<%=@post.user.image%>">
+                 <%end%>
           <div class="media-body">
             <div class="media-body-text">
               <div class="media-heading">

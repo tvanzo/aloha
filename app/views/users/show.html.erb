@@ -1,12 +1,11 @@
 <div class="col-lg-6 center">
-  <div class="center">
-<h2><%=@user.first_name%></h2>
+<h2 ><%=@user.first_name%></h2>
 <%if @user.image!=nil%>
           <img class="media-object d-flex align-self-start mr-3 center" src="<%=@user.image%>">
           <%else%>
           <%=image_tag("user.png",:id => "profile-page-pic") %>
           <%end%>
-    </div>
+   
      <% @user.posts.each do |post| %>
         
         <% @likes_count = Like.where(post_id: post.id).count%>
