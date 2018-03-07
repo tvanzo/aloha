@@ -1,4 +1,5 @@
 <body>
+    
 <div id="back">
   
 <div class="container2">
@@ -36,12 +37,11 @@
     
     <%= f.email_field :email, autofocus: true, autocomplete: "email", :id => 'first-name', :class=>"input100", placeholder: "Email"%>
   </div>
-
   <div class="wrap-input100">
     
     <%= f.password_field :password, autocomplete: "off", :class=>'input100', placeholder: "******" %>
   </div>
-
+    <div id="selection">
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
@@ -61,6 +61,7 @@
 <%= link_to("Sign Up", "/users/sign_up", :class => 'txt3') %>
 				</div>
 <% end %>
+</div>
 </div>
 </div>
 </div>

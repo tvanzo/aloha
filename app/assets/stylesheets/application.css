@@ -188,12 +188,15 @@ body{
   background:url(back.png);
   background-size:cover;
   padding:40px;
+
 }
 .container2{
+  
   width:60%;
   height:500px;
   margin:0 auto;
-  border-radius: 100px;
+  border: 2px solid black;
+  border-radius:10px;
   padding:0 0 0 0;
   box-shadow: 0 15px 40px rgba(0,0,0,.8);
   position:relative;
@@ -210,19 +213,7 @@ body{
   text-align: center;
    border-radius: 10px 0px 0px 10px;
 }
-#blue_title{
-  color:#0099ff;
-  font-size: 60px;
-  margin:0 auto;
-  font-family: CBold;
-  margin-left:970;
-   position:absolute;
-    left:0;
-    top:0;
-    bottom:0;
-    right:0;
-    margin:auto;
-}
+
 .container2 .left img{
   width:37%;
 }
@@ -238,7 +229,7 @@ body{
   height:100%;
   box-sizing:border-box;
   background:white;
-  border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 .formBox{
@@ -247,18 +238,13 @@ body{
   box-sizing:border-box;
   height:100%;
   background:#fff;
-     border-radius: 10px 0px 0px 10px;
-
+  border-radius: 0px 10px 10px 0px;
+  
+}
+#selection{
+  position:relative;
 }
 
-#formBox2{
-  width:50%;
-  padding:80px 40px;
-  box-sizing:border-box;
-  height:510px;
-  background:#fff;
-  margin:0 auto;
-}
 
 #first_name{
   float: left;
@@ -285,32 +271,23 @@ body{
   margin:0 auto;
 }
 
+#blue_title{
+  color:#0099ff;
+  font-size: 60px;
+  margin:0 auto;
+  font-family: "Killa";
+  margin-left:970;
+   position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    margin:auto;
 
-@font-face {
-  font-family: "QanelasSoftDEMO-ExtraBold";
-  src: url(/assets/fonts/QanelasSoftDEMO-ExtraBold.otf) format("truetype");
 }
 
 @font-face {
-  font-family: "Casual";
-  src: url(/assets/fonts/Casual-Regular.ttf) format("truetype");
+  font-family: "Killa";
+  src: url(/assets/Killa.ttf) format("truetype");
 }
 
-@font-face {
-  font-family: "CBold";
-  src: url(/assets/fonts/CBold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "CLight";
-  src: url(/assets/fonts/CLight.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "CRegular";
-  src: url(/assets/fonts/CRegular.ttf) format("truetype");
-}
-
-#com{
-  font-family: "CBold";
-}
