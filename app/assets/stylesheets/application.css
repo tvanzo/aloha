@@ -192,36 +192,63 @@ body{
 .container2{
   width:60%;
   height:500px;
-  background:white;
   margin:0 auto;
-  border:4px solid black;
+  border-radius: 100px;
   padding:0 0 0 0;
-  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+  box-shadow: 0 15px 40px rgba(0,0,0,.8);
+  position:relative;
 }
 
 .container2 .left{
-  
+  background:rgba(255,255,255,1);
+  padding-top:50px;
+  padding-left:10px;
   float:left;
   width:50%;
   height:100%;
-  background:url("left.png");
-  background-size:cover;
   box-sizing:border-box;
+  text-align: center;
+   border-radius: 10px 0px 0px 10px;
+}
+#blue_title{
+  color:#0099ff;
+  font-size: 60px;
+  margin:0 auto;
+  font-family: CBold;
+  margin-left:970;
+   position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+}
+.container2 .left img{
+  width:37%;
+}
+#motto{
+  color:#9ba2a7;
+  font-size:18px;
+ 
 }
 
 .container2 .right{
   float:right;
   width:50%;
-  height:400px;
+  height:100%;
   box-sizing:border-box;
+  background:white;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .formBox{
   width:100%;
   padding:80px 40px;
   box-sizing:border-box;
-  height:400px;
+  height:100%;
   background:#fff;
+     border-radius: 10px 0px 0px 10px;
+
 }
 
 #formBox2{
@@ -256,4 +283,34 @@ body{
   height:80px;
   width:80px;
   margin:0 auto;
+}
+
+
+@font-face {
+  font-family: "QanelasSoftDEMO-ExtraBold";
+  src: url(/assets/fonts/QanelasSoftDEMO-ExtraBold.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Casual";
+  src: url(/assets/fonts/Casual-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "CBold";
+  src: url(/assets/fonts/CBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "CLight";
+  src: url(/assets/fonts/CLight.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "CRegular";
+  src: url(/assets/fonts/CRegular.ttf) format("truetype");
+}
+
+#com{
+  font-family: "CBold";
 }

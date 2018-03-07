@@ -35,9 +35,12 @@
     </style>
 
   </head>
-  
+    <% unless controller_name == "sessions" %>
+
    <body class="with-top-navbar">
   
+
+   
 
 
 <div class="growl" id="app-growl"></div>
@@ -117,6 +120,7 @@
     </ul>
   </div>
 </nav>
+<% end %>
  
   <%if notice or alert %>  
  
