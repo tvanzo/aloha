@@ -3066,36 +3066,7 @@ tbody.collapse.show {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem; }
 
-.card-header-matt {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
-  background: url("cover.jpg");
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
 
-.card-header-prozzie {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
-  background: url("cover.jpg");
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
-
-.card-header-serpentza {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
-  background: url("serpentza_background.png");
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
-.card-header-cmilk {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
-  background: url("cover.jpg");
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
 
 .card-footer {
   padding: 0.75rem 1.25rem;
@@ -8480,12 +8451,35 @@ img.zoom-img {
 .card-profile .card-title {
   margin-bottom: 5px; }
 
-.card-profile .card-header {
+.card-profile .card-header-matt {
   height: 150px;
     background: url("cover.png");
 
   
   background-size: cover; }
+  
+  .card-profile .card-header-cmilk {
+  height: 150px;
+    background: url("laowhy86_back.jpg");
+
+  
+  background-size: cover; }
+  
+  .card-profile .card-header-prozzie {
+  height: 150px;
+    background: url("prozzie_back.png");
+
+  
+  background-size: cover; }
+  
+  .card-profile .card-header-serpentza {
+  height: 150px;
+    background: url("serpentza_background.png");
+
+  
+  background-size: cover; }
+  
+  
 
 
 

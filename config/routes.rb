@@ -22,5 +22,5 @@ Rails.application.routes.draw do
   get 'posts/:id' =>"posts#show"
   post "posts/:id/destroy" => "posts#destroy"
   get ':id' =>"youtubers#index"
-  get ':id/create' =>"youtubers#create"
+  post ':id/create' =>"youtubers#create"
 end

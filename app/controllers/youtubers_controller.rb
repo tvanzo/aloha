@@ -6,9 +6,6 @@ class YoutubersController < ApplicationController
     @youtuber=params[:id]
     end
     
-    def created
-        
-    end
     
     
     
@@ -19,7 +16,7 @@ class YoutubersController < ApplicationController
      def asked
   @posts=Post.where(youtuber: params[:id]).order(created_at: :desc)
     @post=Post.new
-end
+    end
 
 
 
