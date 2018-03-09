@@ -291,6 +291,12 @@ body{
     margin:auto;
 
 }
+#logo{
+  color:white;
+  font-size: 20px;
+  font-family: "Killa";
+
+}
 
 @font-face {
   font-family: "Killa";
