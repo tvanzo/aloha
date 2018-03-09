@@ -220,6 +220,12 @@ body{
 #motto{
   color:#9ba2a7;
   font-size:18px;
+  position:absolute;
+    left:0;
+    top:150;
+    bottom:200;
+    right:0;
+    margin:auto;
  
 }
 
@@ -290,4 +296,13 @@ body{
   font-family: "Killa";
   src: url(/assets/Killa.ttf) format("truetype");
 }
+@font-face {
+  font-family: "CLight";
+  src: url(/assets/Clight.ttf) format("truetype");
+}
+/aloha/app/assets/fonts/QanelasSoftDEMO-ExtraBold.otf
 
+@font-face {
+  font-family: "soft";
+  src: url(assets/fonts/QanelasSoftDEMO-ExtraBold.otf) format("truetype");
+}
