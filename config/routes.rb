@@ -24,4 +24,5 @@ Rails.application.routes.draw do
   get ':id' =>"youtubers#index"
   post ':id/create' =>"youtubers#create"
   post ':id/follow' =>"followers#create"
+  post ':id/destroy' =>"followers#destroy"
 end

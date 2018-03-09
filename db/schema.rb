@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180309133739) do
+ActiveRecord::Schema.define(version: 20180309154738) do
+
+  create_table "add_follow_id_to_folowings", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "answers", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -26,6 +31,13 @@ ActiveRecord::Schema.define(version: 20180309133739) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "content"
+  end
+
+  create_table "followings", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "follower_id"
+    t.string "following_id"
   end
 
   create_table "likes", force: :cascade do |t|

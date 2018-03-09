@@ -1,14 +1,14 @@
 class FollowersController < ApplicationController
     def create
-        @user=current_user
-        @user.following.push("#{params[:id]}")
+        @following=Following.new(follower_id:current_user.id, following_id:"#{params[:id]}")
+        @following.save
         redirect_to request.referrer
 
     end
     
     def destroy
-        @user=current_user
-        @user.following.delete("#{params[:id]}")
+        @following=Following.find_by(follower_id:current_user.id, following_id:"#{params[:id]}")
+        @following.destroy
         redirect_to request.referrer
     end
 end

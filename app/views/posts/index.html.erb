@@ -424,22 +424,27 @@
           <button class="btn btn-outline-primary btn-sm">Buy a ticket</button>
           
           
-        
+         <% if Following.find_by(follower_id: current_user.id, following_id: "matt") %>
+        <%= link_to("/matt/destroy", {method: "post"}) do %>
+        <span >Unfollow Matt</span>
+        <%end%>
+        <%else%>
         <%= link_to("/matt/follow", {method: "post"}) do %>
         <span >Follow Matt</span>
         <%end%>
+        <%end%>
         
+         <% if Following.find_by(follower_id: current_user.id, following_id: "serpentza") %>
+        <%= link_to("/serpentza/destroy", {method: "post"}) do %>
+        <span >Unfollow Serpentza</span>
+        <%end%>
+        <%else%>
         <%= link_to("/serpentza/follow", {method: "post"}) do %>
         <span >Follow Serpentza</span>
         <%end%>
-        
-       <%= link_to("/cmilk/follow", {method: "post"}) do %>
-        <span >Follow Cmilk</span>
         <%end%>
-        
-        <%= link_to("/prozzie/follow", {method: "post"}) do %>
-        <span >Follow Prozzie</span>
-        <%end%>
+         
+
         </div>
       </div>
 
