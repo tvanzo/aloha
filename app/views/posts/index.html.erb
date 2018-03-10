@@ -337,7 +337,21 @@
 
       <ul><a href=/posts><span class="text-muted">Feed</span></a><a href=/posts/asked><span> Asked</span></a></ul> 
           <%= render "shared/ask" %>
-        
+         
+          
+          <% current_user.following.each do |followed| %>
+    <% @posts.where(youtuber: followed.following_id) do |post| %>
+       <%= post.content %>
+    <% end %>
+<% end %>
+          
+          
+          
+          
+          
+          
+          
+
         <% @posts.each do |post| %>
         <%if post.answer != nil%>
         <% @likes_count = Like.where(post_id: post.id).count%>
@@ -383,7 +397,7 @@
               <li class="media mb-3">
                 
                  
-              <div class="posts_pic"></div>
+              <div class="<%=User.find_by(id: post.answer.user_id).first_name%>_answer"></div>
                 
                 <div class="media-body" id="answer_cont_marg">
                  

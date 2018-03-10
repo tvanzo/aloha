@@ -13,4 +13,7 @@ class Post < ApplicationRecord
   def comments
         return Comment.where(post_id: self.id)
   end
+
+  
+  scope :following, ->(followers) { where user_id: followers }
 end

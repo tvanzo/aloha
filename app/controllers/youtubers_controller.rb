@@ -54,5 +54,10 @@ class YoutubersController < ApplicationController
     flash[:notice] = "Post successfully deleted"
     redirect_to("/posts")
   end
+  
+  def asked
+  @posts=Post.where(youtuber:params[:id]).order(created_at: :desc)
+  @post=Post.new
+  end
 
 end

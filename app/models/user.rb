@@ -4,12 +4,19 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
          
+         has_many :subscribed, class_name: "Following", foreign_key: "following_id"
+        has_many :followers, class_name: "Following", foreign_key: "follower_id"
+   
          def posts
          return Post.where(user_id: self.id)
         end
         
         def likes
          return Like.where(user_id: self.id)
+        end
+        
+        def following
+            return Following.where(follower_id: self.id)
         end
         
         def self.from_omniauth(access_token)

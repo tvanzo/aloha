@@ -335,8 +335,12 @@
     <div class="col-lg-6">
             <ul class="list-group media-list media-list-stream mb-4">
 
-      <ul><a href=/posts><span class="text-muted">Feed</span></a><a href=/posts/asked><span> Asked</span></a></ul> 
-          <%= render "shared/ask" %>
+    
+            <ul><a href=/<%=params[:id]%>><span class="text-muted">Feed</span></a><a href=/<%=params[:id]%>/asked><span> Asked</span></a></ul> 
+
+
+      
+      <%= render "shared/ask" %>
         
         <% @posts.each do |post| %>
         <%if post.answer != nil%>
@@ -383,7 +387,7 @@
               <li class="media mb-3">
                 
                  
-              <div class="posts_pic"></div>
+              <div class="<%=@youtuber%>_answer"></div>
                 
                 <div class="media-body" id="answer_cont_marg">
                  

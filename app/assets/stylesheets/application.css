@@ -312,3 +312,55 @@ body{
   font-family: "soft";
   src: url(assets/fonts/QanelasSoftDEMO-ExtraBold.otf) format("truetype");
 }
+
+.matt_answer{
+   width:50px;
+  height:50px;
+  
+  margin-left:50px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+          background:url("matt.png");
+     background-size: cover;
+}
+
+.serpentza_answer{
+   width:50px;
+  height:50px;
+  
+  margin-left:50px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+          background:url("serpentza_profile.jpg");
+     background-size: cover;
+}
+
+.prozzie_answer{
+   width:50px;
+  height:50px;
+  
+  margin-left:50px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+          background:url("prozzie_profile.jpg");
+     background-size: cover;
+}
+
+.cmilk_answer{
+   width:50px;
+  height:50px;
+  
+  margin-left:50px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+          background:url("cmilk_profile.jpg");
+     background-size: cover;
+}
