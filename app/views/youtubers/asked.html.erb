@@ -283,57 +283,12 @@
 <div class="container pt-4 pb-5">
   <div class="row">
     <div class="col-lg-3">
-       <%= render "shared/leftbar" %>
-      
-      <div class="card d-md-block d-lg-block mb-4">
-        <div class="card-body">
-          <h6 class="mb-3">About <small>· <a href="#">Edit</a></small></h6>
-          <ul class="list-unstyled list-spaced">
-            <li><span class="text-muted icon icon-calendar mr-3"></span>Went to <a href="#">Oh, Canada</a>
-            <li><span class="text-muted icon icon-users mr-3"></span>Became friends with <a href="#">Obama</a>
-            <li><span class="text-muted icon icon-github mr-3"></span>Worked at <a href="#">Github</a>
-            <li><span class="text-muted icon icon-home mr-3"></span>Lives in <a href="#">San Francisco, CA</a>
-            <li><span class="text-muted icon icon-location-pin mr-3"></span>From <a href="#">Seattle, WA</a>
-          </ul>
-        </div>
-      </div>
-
-       <div class="card d-md-block d-lg-block mb-4">
-        <div class="card-body">
-          <h6 class="mb-3">Photos <small>· <a href="#">Edit</a></small></h6>
-          <div data-grid="images" data-target-height="150">
-            <div>
-              <img data-width="640" data-height="640" data-action="zoom" src="assets/img/instagram_5.jpg">
-            </div>
-
-            <div>
-              <img data-width="640" data-height="640" data-action="zoom" src="assets/img/instagram_6.jpg">
-            </div>
-
-            <div>
-              <img data-width="640" data-height="640" data-action="zoom" src="assets/img/instagram_7.jpg">
-            </div>
-
-            <div>
-              <img data-width="640" data-height="640" data-action="zoom" src="assets/img/instagram_8.jpg">
-            </div>
-
-            <div>
-              <img data-width="640" data-height="640" data-action="zoom" src="assets/img/instagram_9.jpg">
-            </div>
-
-            <div>
-              <img data-width="640" data-height="640" data-action="zoom" src="assets/img/instagram_10.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
+      <%= render "shared/leftbar" %>      
     </div>
 
     <div class="col-lg-6">
 
       <ul class="list-group media-list media-list-stream mb-4">
-          
         <ul><a href=/<%=params[:id]%>><span>Feed</span></a><a href=/<%=params[:id]%>/asked><span class="text-muted"> Asked</span></a></ul> 
 
         <%= render partial: "shared/ask" %>
@@ -400,7 +355,8 @@
       <%end%>
 
             <%end%>
-
+</div>
+</div>
       
       
       
@@ -412,29 +368,16 @@
               
               
 
-            <div class="media-body-inline-grid" data-grid="images">
-              <div style="display: none">
-                <img data-action="zoom" data-width="1050" data-height="700" src="assets/img/unsplash_1.jpg">
-              </div>
-
-              <div style="display: none">
-                <img data-action="zoom" data-width="640" data-height="640" src="assets/img/instagram_1.jpg">
-              </div>
-
-              <div style="display: none">
-                <img data-action="zoom" data-width="640" data-height="640" src="assets/img/instagram_13.jpg">
-              </div>
-
-              <div style="display: none">
-                <img data-action="zoom" data-width="1048" data-height="700" src="assets/img/unsplash_2.jpg">
-              </div>
-            </div>
+            
             
            
-              
+            <div class="col-lg-3">
+                <%= render "shared/rightbar" %>      
+
+            </div>
+        </div>
         
-        
-      
+      </div>
 
   </body>
 
