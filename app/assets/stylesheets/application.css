@@ -355,12 +355,15 @@ body{
 .cmilk_answer{
    width:50px;
   height:50px;
-  
+  border-radius: 100%;
   margin-left:10px;
   border: 3px solid #fff;
-  border-radius: 100%;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
           background:url("cmilk_profile.jpg");
      background-size: cover;
+}
+
+.cmilk_answer2{
+  border-radius: 0%;
 }
